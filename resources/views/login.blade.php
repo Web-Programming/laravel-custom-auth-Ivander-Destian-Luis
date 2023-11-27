@@ -18,7 +18,8 @@
                                 @endif
                                 <div class="card-header">
                                     <div class="text-center">
-                                        <img src="{{ asset('image/library.png') }}" class="img-responsive img-body">
+                                        <img src="{{ asset('image/library.png') }}" class="img-responsive img-body"
+                                            height="300" width="300">
                                     </div>
 
                                     <h3 class="text-center font-weight-light my-4">Login</h3>
