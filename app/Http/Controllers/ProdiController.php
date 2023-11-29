@@ -21,9 +21,10 @@ class ProdiController extends Controller
         return view('prodi.create');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Prodi $prodi)
     {
         // echo $request->nama;
+        $this->authorize('create', $prodi);
 
         $validateData = $request->validate([
             'name' => 'required|min:5|max:20',
@@ -46,6 +47,7 @@ class ProdiController extends Controller
 
     public function index()
     {
+
         $prodis = Prodi::all();
         return view('prodi.index', ['prodis' => $prodis, 'kampus' => 'Universitas Multi Data Palembang']);
     }
@@ -57,6 +59,7 @@ class ProdiController extends Controller
 
     public function edit(Prodi $prodi)
     {
+
         $this->authorize('update', $prodi);
 
         return view('prodi.edit', ['prodi' => $prodi,]);
