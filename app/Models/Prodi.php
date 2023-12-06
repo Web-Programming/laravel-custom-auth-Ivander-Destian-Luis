@@ -9,4 +9,5 @@ class Prodi extends Model
 {
     use HasFactory;
     protected $table = 'prodis';
+    protected $fillable = ['name', 'foto'];
 }

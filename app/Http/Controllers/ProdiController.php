@@ -16,6 +16,8 @@ class ProdiController extends Controller
         return view('prodi.index', ['allmahasiswaprodi' => $result, 'kampus' => $kampus]);
     }
 
+    
+
     public function create()
     {
         return view('prodi.create');
